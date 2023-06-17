@@ -1,0 +1,63 @@
+{
+    "raw": {
+        "intensity": {
+            "path": "./raw/intensity",
+            "tags": ["raw", "control", "treated"],
+            "wipp_type": "genericData",
+            "description": "This data comes from the BBBC020 Collection. Images are 1388x1040 px."
+        },  
+        "BBC020_v1_outlines_nuclei": {
+            "path": "./raw/BBC020_v1_outlines_nuclei",
+            "tags": ["masks"],
+            "wipp_type": "genericData",
+            "description": "This data comes from the BBBC020 Collection. Images are 1388x1040 px."
+        },
+        "BBC020_v1_outlines_cells/-!": {
+            "path": "./raw/masks/BBC020_v1_outlines_cells",
+            "tags": ["masks"],
+            "wipp_type": "genericData",
+            "description": "This data comes from the BBBC020 Collection. Images are 1388x1040 px."
+        }
+    },
+    "standard": {
+        "intensity": {
+            "path": ".data/standard/intensity",
+            "tags": ["intensity_standard"],
+            "description": "Data converted to standard file format (i.e. .ome.tif) and file name convention.",
+            "patterns": {
+                "all": "p{p+}_t{t+}_r{r+}_c{c+}.ome.tif",  
+                "cell": "p{p+}_t{t+}_r{r+}_c01.ome.tif",
+                "nuclei": "p{p+}_t{t+}_r{r+}_c02.ome.tif",
+                "control": "p00_t{t+}_r{r+}_c{c+}.ome.tif",
+                "treated": "p01_t{t+}_r{r+}_c{c+}.ome.tif"
+                
+            },
+            "wipp_type": "collection"
+        },
+        "masks": {
+            "path": "./standard/test/labels",
+            "tags": ["masks_standard"],
+            "description": "Data converted to standard file format (i.e. .ome.tif) and file name convention.",
+            "patterns": {
+                "all": "p{p+}_t{t+}_r{r+}_c{c+}.ome.tif",
+                "nuclei" : "p{p+}_t{t+}_r{r+}_c00.ome.tif",
+                "cell" : "p{p+}_t{t+}_r{r+}_c01.ome.tif",
+                "control": "p00_t{t+}_r{r+}_c{c+}.ome.tif",
+                "treated": "p01_t{t+}_r{r+}_c{c+}.ome.tif"
+            },
+            "wipp_type": "collection"
+        }
+        
+        
+    },
+    "tags": [
+        "intensity",
+        "masks",
+        "nuclei",
+        "cell",
+        "control",
+        "treated",
+        "fluorescent"
+    ]
+    
+}     
